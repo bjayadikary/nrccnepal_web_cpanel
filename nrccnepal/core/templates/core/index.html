@@ -1,0 +1,356 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block css %}{% endblock css %}
+{% block content %}
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+  <div class="hero-container">
+    
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+      
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide 1 -->
+        <!-- <div class="carousel-item active" style="background-image: url({% static 'core/img/landing_page/cover_participants.jpg' %});"> -->
+        <div class="carousel-item active" style="background-image: url({{ home_featured_images.landing_cover_pic.url }});">
+          <div class="carousel-container" style="margin-top: 200px;">
+            <div class="carousel-content">
+              <h1 class="animate__animated animate__fadeInDown text-white title">Nepal Research and Collaboration Center
+              </h1>
+              <h3>Let's Research Together</h3>
+              
+              <div class="animate__animated animate__fadeInUp mt-0">
+                <p style="padding: 0; text-align: left;">Bring us your ideas, research reviews, projects, findings and innovation.</p>
+                <p style="padding: 0; text-align: left;">Collaborate to make you dreams come true</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <main id="main">
+    
+    <!-- ======= Aboutx Section ======= -->
+    <section id="aboutx" class="aboutx">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="{{ home_featured_images.intro_side_pic.url }}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <!-- <h3 class="title">NRCC</h3> -->
+            <p style="text-align: justify;">
+              <span style="color: blue; font-size: 17px;">Nepal Research and Collaboration Center (NRCC)</span> is a non-profit, non-governmental organization led by young minds to bring change to Nepal's research landscape. We began working in 2019 A.D. and were officially registered in 2022 A.D. We aim to be the bridge between national and international expert researchers and research enthusiasts, encouraging collaborative research. We have conducted various programs to create a research culture and connect people through research-based projects to achieve our goals.<br><br>
+              We strive to bring interdisciplinary fields of study under one roof through effective and collaborative learning. We aim to build a community that empowers Nepalese students with effective solutions and brings change to the education system. With programs like Monthly-Research Talk and three-month-long Research Training, we have been facilitating learning and growth platforms for Nepalese research enthusiasts. We have consistently promoted research throughout the country with research-based programs like Econ-Talk, Panel Discussion on Past, Present, and Future of Research in Nepal, NASA Spaceapps Kathmandu, and various STEM campaigns.
+              
+            </p>
+          </div>
+        </div>
+        
+      </div>
+    </section><!-- End Aboutx Section -->
+    
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts">
+      <div class="container">
+        
+        <div class="row no-gutters justify-content-center">
+          {% for count_section in counts_section %}
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <!-- <i class="bi bi-emoji-smile"></i> -->
+              <h1>{{ count_section.counts }}+</h1>
+              <p>{{ count_section.descriptive_text }}</p>
+            </div>
+          </div>  
+          {% endfor %}
+        </div>
+        
+      </div>
+    </section><!-- End Counts Section -->
+    
+    
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about" style="padding-top:0px;">
+      <div class="container">
+        
+        <div class="row">
+          <div class="content d-flex flex-column justify-content-center">
+            <h3 class="title" style="text-align: center;">Our Objectives</h3>
+            <p>
+              At the Nepal Research and Collaboration Center, our primary objectives are to change Nepal's research landscape and develop collaborative and interdisciplinary research. By partnering with like-minded organizations and individuals, we aim to bridge the gap between research and practice, promoting an evidence-based approach to education.
+            </p>
+            <div class="row justify-content-center">
+              <div class="col-md-3 icon-box"> 
+                <i class="bx bx-receipt"></i>
+                <h4>Research</h4>
+                <p>We partner between national and international researchers, creating a network that bridges the gap between research and practice through joint projects and initiatives.</p>
+              </div>
+              <div class="col-md-3 icon-box">
+                <i class="bx bx-cube-alt"></i>
+                <h4>Innovate</h4>
+                <p>We promote a culture of learning by conducting programs that enhance research skills, empowering Nepalese students and professionals to contribute to global knowledge.</p>
+              </div>
+              <div class="col-md-3 icon-box">
+                <i class="bx bx-shield"></i>
+                <h4>Collaborate</h4>
+                <p>By integrating interdisciplinary approaches and innovative methodologies, we aim to innovative solutions that address educational challenges and improve the research landscape in Nepal and add value to scientific research worldwide.</p>
+              </div>
+            </div>
+          </div><!-- End .content-->
+        </div>
+      </div>
+      
+    </div>
+  </section><!-- End About Section -->
+  
+  <!-- ======= programs Section ======= -->
+  <!-- <section id="programs" class="programs">
+    <div class="container">
+      
+      <h2 class="title">Our Programs</h2>
+      
+      <div class="row">
+        <div class="col-xl-6 col-md-6">
+          <div class="post-item">
+            <img src="assets/img/Research Training.jpg" class="img-fluid" alt="" style="border-radius: 16px;">
+            <h2>Research Training</h2> 
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis harum voluptate, dolorum accusamus voluptates laborum earum aspernatur eveniet! Dolores dolorum doloribus esse harum iusto eligendi consequatur commodi exercitationem iure?</p>               
+            <hr>
+            <a class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div> -->
+        <!-- End post item -->
+        
+        <!-- <div class="col-xl-6 col-md-6">
+          <div class="post-item">
+            <img src="assets/img/Research Talk (1).jpg" class="img-fluid" alt="" style="border-radius: 16px;">
+            <h2>Research Talk</h2> 
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis harum voluptate, dolorum accusamus voluptates laborum earum aspernatur eveniet! Dolores dolorum doloribus esse harum iusto eligendi consequatur commodi exercitationem iure?</p>               
+            <hr>
+            <a class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-xl-6 col-md-6">
+          <div class="post-item">
+            <img src="assets/img/Econ Talk.jpg" class="img-fluid" alt="" style="border-radius: 16px;">
+            <h2>Econ Talk</h2> 
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis harum voluptate, dolorum accusamus voluptates laborum earum aspernatur eveniet! Dolores dolorum doloribus esse harum iusto eligendi consequatur commodi exercitationem iure?</p>               
+            <hr>
+            <a class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <div class="col-xl-6 col-md-6">
+          <div class="post-item">
+            <img src="assets/img/Panel Discussion.jpg" class="img-fluid" alt="" style="border-radius: 16px;"a>
+            <h2>Panel Discussion</h2> 
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi corporis harum voluptate, dolorum accusamus voluptates laborum earum aspernatur eveniet! Dolores dolorum doloribus esse harum iusto eligendi consequatur commodi exercitationem iure?</p>               
+            <hr>
+            <a class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section> --> 
+  <!-- End Recent Blog Posts Section -->
+  
+  <section id="upcoming" class="upcoming">
+    <div class="container">
+      
+      <h2 class="title">Upcoming Programs</h2>
+      
+      <div class="row">
+
+        {% for program in ongoing_and_upcoming_programs %}
+        <div class="col-xl-3 col-md-3">
+          <div class="post-item">
+            <img src="{{ program.featured_image.url }}" class="img-fluid" alt="" style="border-radius: 8px;">
+            <div class="program-name">
+              <h2>{{ program.name }}</h2>
+              {% if program.learn_more_link %}
+              <a class="readmore stretched-link" href="{{ program.learn_more_link }}"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+              {% else %}
+              <a class="readmore stretched-link"><span>Learn More</span><i class="bi bi-arrow-right"></i></a>
+              {% endif %}
+            </div>
+            <div class="program-date">
+              {% if program.commence_date <= now and program.end_date >= now %}
+              <h2>Happening Now!</h2>
+              {% else %}
+              <h2>{{ program.commence_date|date:"d M, Y" }}</h2>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<section id="coreteam" class="coreteam">
+  <div class="container">
+    
+    <h2 class="title">Core Team</h2>
+    
+    <div class="row">
+      {% for core_team_member in core_team_members %}
+      <div class="col-xl-3 col-md-3">
+        <div class="post-item">
+          <img src="{{ core_team_member.image.url }}" class="img-fluid" alt="" style="border-radius: 8px;">
+          <div class="team-name">
+            <h2>{{ core_team_member.name }}</h2> 
+            <p>{{ core_team_member.position }}</p>
+          </div>
+          <div class="team-link">
+            <span>
+              {% if core_team_member.social_medium_1 == 'LI' %}
+              <a class="link" href="{{ core_team_member.social_medium_1_link}}"><i class="bi bi-linkedin"></i></a>
+              {% elif core_team_member.social_medium_1 == 'EM' %}
+              <a class="link" href="{{ core_team_member.social_medium_1_link}}"><i class="bi bi-envelope-fill"></i></a>
+              {% elif core_team_member.social_medium_1 == 'FB' %}
+              <a class="link" href="{{ core_team_member.social_medium_1_link}}"><i class="bi bi-facebook"></i></a>
+              {% endif %}
+              
+              {% if core_team_member.social_medium_2 == 'LI' %}
+              <a class="link" href="{{ core_team_member.social_medium_2_link}}"><i class="bi bi-linkedin"></i></a>
+              {% elif core_team_member.social_medium_2 == 'EM' %}
+              <a class="link" href="{{ core_team_member.social_medium_2_link}}"><i class="bi bi-envelope-fill"></i></a>
+              {% elif core_team_member.social_medium_2 == 'FB' %}
+              <a class="link" href="{{ core_team_member.social_medium_2_link}}"><i class="bi bi-facebook"></i></a>
+              {% endif %}
+            </span>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- <section id="faq" style="margin-left: 120px; margin-right: 120px;">
+  <h3 class="title">FAQs</h3>
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Who is NRCC?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>
+            The Nepal Research and Collaboration Center (NRCC) is an esteemed institution dedicated to fostering a culture of research-based learning and academic excellence in Nepal. Since its inception in 2019, NRCC has been at the forefront of educational innovation, bringing together a vibrant community of educators, researchers, and learners to embark on a transformative journey of knowledge discovery and intellectual growth. At NRCC, we firmly believe that research-based learning is the key to unlocking individual potential and driving societal progress. Through our dynamic range of programs and initiatives, we empower students, educators, and professionals to delve into the realms of inquiry, critical thinking, and innovation. From our captivating "Read with NRCC" campaign, which instills a love for reading and lifelong learning, to our cutting-edge "Python for Research" training, equipping participants with invaluable data analysis and programming skills, we provide a rich and immersive learning environment that nurtures intellectual curiosity and ignites a passion for exploration. Join us at NRCC as we embark on a transformative educational journey that transcends boundaries and empowers individuals to make a meaningful impact in their fields of study. Together, we will push the boundaries of knowledge, foster collaboration and interdisciplinary research, and cultivate a new generation of thinkers and problem solvers who will shape the future of Nepal's scientific, academic, and social landscape. With NRCC, your educational aspirations will soar to new heights, as we strive to create a vibrant community of lifelong learners dedicated to making a difference in the world.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          What are its objectives?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>
+            <ol>
+              <li>
+                <strong>Unleash the Power of Data:</strong> Master data visualization and advanced analysis techniques for compelling insights
+              </li>
+              <li>
+                <strong>Your Research Impact:</strong> Communicate effectively and publish strategically to elevate your research.
+              </li>
+              <li>
+                <strong>Meaningful Connections:</strong> Join a vibrant research community for collaborations and opportunities.
+              </li>
+              <li>
+                <strong>Your Research Journey:</strong> Build confidence and recognition as a skilled researcher.
+              </li>
+              <li>
+                <strong>Inquiry:</strong> Explore diverse research strategies and drive groundbreaking discoveries
+              </li>
+              <li>
+                <strong>Research Skills:</strong> Acquire valued expertise in literature studies, data synthesis, and analysis.
+              </li>
+              <li>
+                <strong>Transformative Learning:</strong> Engage in immersive activities to fuel your passion for research.
+              </li>
+            </ol>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          What is Research Training?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>Research Training 2024 is a 3 months virtual program conducted by Nepal Research and Collaboration Center. The program aims to upskill research enthusiasts with necessary technical and non-technical knowledge necessary to conduct their research. Each session is facilitated by experienced trainers and supported by proficient mentors. The platform also gives an opportunity to build a strong network with researchers from diverse backgrounds.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Who can apply?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>The training program is open to all individuals who have an interest in research and a desire to develop their skills and knowledge in a collaborative and supportive learning environment. Whether you are a student, professional, or researcher from any field, this training is designed to provide valuable insights and tools to enhance your research abilities.</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          When are the important deadlines? 
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>
+            <ul style="list-style: none;">
+              <li>June 05, 2024: Application Open</li>
+              <li>June 25, 2024: Application Close</li>
+              <li>June 29, 2024: Program Start</li>
+              <li>August 14, 2024: Program end</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          Will I get a certificate upon completion?
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <p>Yes, all the participants who complete the course will receive a certificate.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+</main><!-- End #main -->
+{% endblock content %}
+{% block js %}{% endblock js %}

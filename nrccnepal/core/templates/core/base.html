@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+{% load custom_filters %}
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>NRCC | {% block title %}{% endblock title %}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'core/img/fav_icon.png' %}" rel="icon">
+  <link href="{% static 'core/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'core/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'core/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'core/css/style.css' %}" rel="stylesheet">
+  <!-- Swipper CSS -->
+  <link rel="stylesheet" href="{% static 'core/css/swiper-bundle.min.css' %}">
+
+  {% block css %}{% endblock css %}
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      
+      <a href="{% url 'home' %}" class="logo"><img src="{% static 'core/img/header_footer_in_use/NRCC_transparent_white.png' %}" alt="" class="img-fluid"></a>
+      
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="{% url 'home' %}">Home</a></li>
+          <li class="dropdown">
+            <a href="{% url 'programs' %}">Programs<i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="{% url 'program_details' slug=slugs|get_item:'Research Talk' %}">Research Talk</a></li> 
+              <li class="dropdown"><a href="{% url 'program_details' slug=slugs|get_item:'Research Training' %}">Research Training</a>
+                <ul>
+                  <li><a href="{% url 'research23' %}">Research Training 2023</a></li>
+                  <li><a href="{% url 'research24' %}">Research Training 2024</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a>NASA SpaceApps</a>
+                <ul>
+                  <li><a href="{% url 'spaceapps' %}">NASA SpaceApps 2023</a></li>
+                  <li><a href="{% url 'spaceapps' %}">NASA SpaceApps 2024</a></li>
+                </ul>
+              </li>
+              <li><a>ECON Talk</a></li>
+              <li><a href="{% url 'program_details' slug=slugs|get_item:'Panel Discussion' %}">Panel Discussion</a></li>
+            </ul>
+          </li>
+          <li><a href="{% url 'research24' %}">Research Training 2024</a></li>
+          <li><a class="nav-link" href="#">About</a></li>          
+          <li><a class="getstarted scrollto" href="{% url 'contact' %}">Contact Us</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      
+      
+    </div>
+  </header>
+  <!-- ======= End Header ===== -->
+
+
+    {% block content %}
+    
+    
+    {% endblock content %}
+    
+    {% if show_footer %}
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            
+            <div class="col-lg-4 col-md-6">
+              <img src="{% static 'core/img/header_footer_in_use/NRCC_transparent_white.png' %}" alt="" class="img-fluid" style="width: 182px; height: auto; margin-top: 0;">
+              <div class="footer-info" style="margin-top: 0;">
+                <div class="social-links mt-3">
+                  <a href="https://www.facebook.com/nrccNepal" class="facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/nrccnepal/" class="instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/company/nrccnepal/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 footer-links">
+              <h4 style="color: #deecff; font-size: 24px; font-weight: 700;">Contact Us</h4>
+              <div class="footer-info">
+                <div style="display: flex;">
+                  <div>
+                    <img src="{% static 'core/img/header_footer_in_use/location.png' %}" alt="" class="img-fluid" style="width: 30px; height: 30px;">
+                  </div>
+                  <div style="margin-left: 10px;">
+                    <p>
+                      Bhakti Thapa Sadak, New Baneshwor <br>
+                      Kathmandu, Nepal<br><br>
+                    </p>
+                  </div>
+                </div>
+
+                <div style="display: flex;">
+                  <div>
+                    <img src="{% static 'core/img/header_footer_in_use/call.png' %}" alt="" class="img-fluid" style="width: 20px; height: 20px; margin-left: 6px;">
+                  </div>
+                  <div style="margin-left: 15px;">
+                    <p>
+                      +977- 9802348778<br><br>
+                    </p>
+                  </div>
+                </div>
+
+                <div style="display: flex;">
+                  <div>
+                    <img src="{% static 'core/img/header_footer_in_use/email.png' %}" alt="" class="img-fluid" style="width: 20px; height: 20px; margin-left: 6px;">
+                  </div>
+                  <div style="margin-left: 14px;">
+                    <p>
+                      info@nrccnepal.org<br><br>
+                    </p>
+                  </div>
+                </div>
+              </div>
+           </div>
+            
+            <div class="col-lg-4 col-md-6 footer-newsletter" id="newsletter-form">
+              <!-- style="color: #deecff; font-size: 24px; font-weight: 700;" -->
+              <h4>Our Newsletter</h4>
+              <p>Stay up-to-date with the latest news and insights delivered straight to your inbox.</p>
+              <form action="#newsletter-form" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="form_type" value="newsletter_form">
+                {{ subscriber_form.email }}
+                <!-- <input type="email" name="email" placeholder="example@gmail.com"> -->
+                <input type="submit" value="Subscribe">
+              </form>
+              {% if form_type == 'newsletter_form' %}
+              {% if messages %}
+              {% for message in messages %}
+              <div class="alert alert-success">
+                {{ message }}
+              </div>
+              {% endfor %}
+              {% endif %}
+              {% endif %}
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <!-- <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>NRCC</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          
+          Designed by NRCC Team</a>
+        </div>
+      </div> -->
+    </footer><!-- End Footer -->
+    {% endif %}
+    
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    
+    <!-- Vendor JS Files -->
+    <script src="{% static 'core/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+    <script src="{% static 'core/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'core/vendor/glightbox/js/glightbox.min.js' %}"></script>
+    <script src="{% static 'core/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'core/vendor/swiper/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'core/vendor/php-email-form/validate.js' %}"></script>
+    
+    <!-- Template Main JS File -->
+    <script src="{% static 'core/js/main.js' %}"></script>
+    
+    <script src="{% static 'core/js/script.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Swipper JS -->
+    <script src="{% static 'core/js/swiper-bundle.min.js' %}"></script>
+
+    
+  </body>
+  
+  </html>
