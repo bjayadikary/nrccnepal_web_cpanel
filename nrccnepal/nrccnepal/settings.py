@@ -29,9 +29,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-5mnmy3rv(98w5em!e8s@q=@93td=&_0k6bh)vlj5v-yhw&vo!x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.one.nrccnepal.org']
 
 
 # Application definition
@@ -144,14 +144,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_ROOT = os.path.join('/home2/nrccnepa/public_html/static')
+STATIC_ROOT = os.path.join('/home2/nrccnepa/public_html/static') # it's where the static files get copied automatically when we run collectstatic. It is useless during developement and only required for deployment. Django looks for static files inside each app's directory and serves them automatically in development. This is done by manage.py runserver whene DEBUG=True
 STATIC_URL = '/static/'
+# When on deployment Django copies static files from all the apps we have to STATIC_ROOT and Nginx looks for static files in that folder
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# We put static files in STATICFILES_DIRS or <APP_NAME>/static/. It is list of folders where Django will search for additional static files aside from the static folder of each app installed
 STATICFILES_DIRS = [
     BASE_DIR /"static",
     '/var/www/staticfiles/',
@@ -162,7 +166,7 @@ STATICFILES_DIRS = [
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Managing Media
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # It is where our user uploaded files image files (via forms or admin) gets stored
 MEDIA_URL = '/media/'
 
 # Message tag to be modified
