@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-5mnmy3rv(98w5em!e8s@q=@93td=&_0k6bh)vlj5v-yhw&vo!x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'www.one.nrccnepal.org']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.nrccnepal.org']
 
 
 # Application definition
